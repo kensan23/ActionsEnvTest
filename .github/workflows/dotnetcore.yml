@@ -16,5 +16,6 @@ jobs:
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: run
-      env: ${{ secrets.TEST_VAR }}
+      env:
+        XeroConfiguration__AccountingBaseUrl:   ${{ secrets.TEST_VAR }}  
       run: dotnet run
